@@ -1,0 +1,59 @@
+<!-- create a webpage using forms -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assignment_8.css">
+    <title>Web_page</title>
+    
+</head>
+<body>
+    <h1>Enter your details</h1>
+
+    <div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name pls">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name pls">
+
+    <!-- <label for="year"> Select Years</label>
+    <select id="year" name="year">
+      <option value="First">First</option>
+      <option value="Second">Second</option>
+      <option value="Third">Third</option>
+      <option value="Fourth">Fourth</option>
+    </select>
+     -->
+    <p>Select year:</p>
+    <form>
+      <input type="radio" id="first" name="fav_language" value="first">
+      <label for="first">First year</label><br>
+      <input type="radio" id="second" name="fav_language" value="Second">
+      <label for="second">Second Year</label><br>
+      <input type="radio" id="third" name="fav_language" value="third">
+      <label for="third">Third</label>
+      <br>
+      <input type="radio" id="fourth" name="fav_language" value="fourth">
+      <label for="Fourth">Fourth</label>
+    </form>
+    <br>
+    <label for="subs">Subjects</label>
+    <select id="subs" name="subs">
+      <option value="Web technology">Web technology</option>
+      <option value="Design and Analysis Algorithms">Design and Analysis Algorithms</option>
+      <option value="Signals and systems">Signals and systems</option>
+    </select>
+  <form action="output.html">
+    <input type="submit" value="Submit">
+</form>
+
+  </form>
+</div>
+    
+</body>
+</html>

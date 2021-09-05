@@ -1,0 +1,143 @@
+<!-- Create a web page  using form. Once you click on submit button, link  to other page.Note: Use external CSS for styling.     -->
+
+<!-- to create a event registration form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .rainbow-text {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 50px;
+            text-shadow: #A3A3A3 1px 1px 1px;
+        }
+        .rainbow-text .block-line > span {
+            display: inline-block;
+        }
+        /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+/* input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+/* When moving the mouse over the submit button, add a darker green color */
+/* input[type=submit]:hover {
+  background-color: #45a049;
+} */
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+        </style>
+        <link rel="stylesheet" href="pro9.css">
+    <title>Event_registration_Website</title>
+</head>
+<body>
+    <div class="rainbow-text" style="text-align: center;">
+        <span class="block-line"><span>
+            <span style="color:#ff0000;">H</span>
+            <span style="color:#ff3c00;">E</span>
+            <span style="color:#ff7300;">Y&nbsp;</span>
+            <span style="color:#e1ff00;">W</span>
+            <span style="color:#aaff00;">E</span>
+            <span style="color:#6eff00;">L</span>
+            <span style="color:#37ff00;">C</span>
+            <span style="color:#00ff00;">O</span>
+            <span style="color:#00ff3c;">M</span>
+            <span style="color:#00ff73;">E&nbsp;</span> 
+            <span style="color:#00e1ff;">T</span>
+            <span style="color:#00a6ff;">O&nbsp;</span>
+            <!-- <span style="color:#006eff;">x</span> -->
+            <span style="color:#0037ff;">O</span>
+            <span style="color:#0400ff;">U</span>
+            <span style="color:#3c00ff;">R&nbsp;</span>
+            <!-- <span style="color:#7300ff;">n</span> -->
+            <span style="color:#ae00ff;">E</span>
+            <span style="color:#e500ff;">V</span>
+            <span style="color:#ff00e1;">E</span>
+            <span style="color:#ff00aa;">N</span>
+            <span style="color:#ff006e;">T&nbsp;</span>
+    </div>
+
+<div class="container">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <form>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+    </form>
+<br>
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Submit</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">registration Successful</h4>
+      </div>
+      <div class="modal-body">
+        <p>Thank You for registration</p>
+        <p>Have a great day ahead!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</form>
+</div>
+  
+</body>
+</html>
