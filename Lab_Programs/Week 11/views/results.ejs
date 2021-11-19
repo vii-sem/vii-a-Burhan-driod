@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+ 
+   <title>Document</title>
+</head>
+<body>
+   <h1>Results</h1>
+   <div>
+       <% data['results'].forEach((movie)=> { %>
+           <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2<%=movie['poster_path']%>">
+           <hr>
+           <h1>The title is : <%= movie['original_title'] %>  </h1>
+           <hr>
+           <h1>Summary of the movie : <%= movie['overview'] %></h1>
+              
+     <%  }) %>
+   </div>
+</body>
+</html>
