@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2 Qn 5</title>
+  <script>
+    function validate(){
+      let x = document.getElementById("macaddr").value;
+      var pattern = "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})|([0-9a-fA-F]{4}\\.[0-9a-fA-F]{4}\\.[0-9a-fA-F]{4})$";
+      if(x.match(pattern))
+      alert("Valid mac address!");
+      else
+      alert("Invalid mac address!");
+    }
+  </script>
+</head>
+<body style="text-align: center;">
+  <h2>Mac Address Validation</h2>
+  <form action="">
+    <label for="macaddr">Enter a mac address:</label>
+    <input type="text" name="macaddr" id="macaddr" placeholder="Mac Address..."><br><br>
+    <input type="submit" onclick="validate()" placeholder="Validate">
+  </form>
+</body>

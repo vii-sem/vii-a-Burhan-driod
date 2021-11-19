@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Parsing Expression</title>
+</head>
+
+<body>
+<script type = "text/javascript">
+var expr = prompt("Enter the expression", "");
+function parse()
+ {
+  let regexexp = /(-?\d+(?:\.\d+)?)\s*([-+*\/])\s*(-?\d+(?:\.\d+)?)/;
+  let result = expr.match(regexexp);
+  if(!result)
+   alert("Invalid Expression");
+   result.shift();
+   return result;
+ }
+alert(parse(expr))
+</script>
+</body>
+</html>

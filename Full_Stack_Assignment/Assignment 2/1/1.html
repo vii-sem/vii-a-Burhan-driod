@@ -1,0 +1,93 @@
+<!-- js website to use on blur and on click -->
+<!-- validate age greater than 18 -->
+<!-- count the number of words in description -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program_1</title>
+
+</head>
+
+<body style="text-align: center;">
+
+    <h1 style="color: rgb(18, 176, 216)">
+		Age Validate
+	</h1>
+	<p>
+		Type in your age and click on it to verify your Age
+	</p>
+
+    <input id="numb">
+
+    <button type="button" onblur="myFunction()">click outside</button>
+
+    <p id="demo"></p>
+
+    <script>
+    function myFunction() {
+    // Get the value of the input field with id="numb"
+    let x = document.getElementById("numb").value;
+    // If x is Not a Number or less than one or greater than 10
+    let text;
+    if (isNaN(x) || x < 18) {
+     text = "Age not valid";
+    } else {
+        text = "Age Valid";
+    }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+<!-- COUNT WORDS -->
+	<h1 style="color: rgb(18, 176, 216)">
+		Count_words
+	</h1>
+	<p>
+		Type in the textbox and click on
+		the button to count the words
+	</p>
+	<textarea id="inputField" rows=10 cols="60">
+	</textarea>
+	<br><br>
+	<button onclick="countWords()">
+		Count Words
+	</button>
+	<br><br>
+	<p> Word Count:
+		<span id="show">0</span>
+	</p>
+
+<!-- Script for counting words -->
+	<script>
+		function countWords() {
+
+			// Get the input text value
+			var text = document.getElementById("inputField").value;
+
+			// Initialize the word counter
+			var numWords = 0;
+
+			// Loop through the text
+			// and count spaces in it
+			for (var i = 0; i < text.length; i++) {
+				var currentCharacter = text[i];
+
+				// Check if the character is a space
+				if (currentCharacter == " ") {
+					numWords += 1;
+				}
+			}
+
+			// Add 1 to make the count equal to
+			// the number of words
+			// (count of words = count of spaces + 1)
+			numWords += 1;
+
+			// Display it as output
+			document.getElementById("show").innerHTML = numWords;
+		}
+	</script>
+</body>
+</html>
